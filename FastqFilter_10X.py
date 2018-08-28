@@ -60,15 +60,15 @@ def filter_pair(lines):
 
     sequence2 = lines[2].split()[0]
 
-    print "sequence2 is %s" % sequence2
+    #print "sequence2 is %s" % sequence2
 
     if seqid1 != seqid2:
         print "Warning: out of sync pairs detected with ids %s %s" % (seqid1,seqid2)
 
     for badSeq in filter_list:
         if re.search(badSeq,sequence2):
-            print "Found this:\t" + badSeq
-            print "in this:\t" + sequence2
+            #print "Found this:\t" + badSeq
+            #print "in this:\t" + sequence2
             return False
     return lines
 
